@@ -1,3 +1,3 @@
-# Mapping chief complaints to presenting problems using BERT
+# Classifying free-text chief complaints in the Emergency Department using BERT
 
 
