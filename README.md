@@ -1,8 +1,16 @@
 # Classifying free-text chief complaints in the Emergency Department using BERT
 
-## description of project
-1.8 million visits in yale hospital system
+## what are chief complaints and why are they important
 
+## what did we do
+
+We trained a clinical BERT model 1.8 million visits from 2013-2018 in the Yale hospital system to map free-text chief complaints to structured categories of presenting problems.
+
+## How? brief summary of training
+
+train.py in training folder. If you have any questions, email me
+
+## Pretrained models
 
 Download pretrained models and accompanying files from: https://drive.google.com/drive/folders/13GpWRlJCt8Sv_8fpR1nLkIGiIn4aFuAO?usp=sharing
 
@@ -16,9 +24,9 @@ There are 4 options for pretrained models based on the different versions of tra
 
 `vocab.txt`: vocab used by tokenizer.
 
-## Using custom chief complaint data
+## Generate predictions for your own chief complaint data
 
-To run the model on your own set of chief complaint texts, it should just be a simple text file with each row being a chief complaint text. A sample input file is provided `test_input.txt`
+To run the model on your own set of chief complaints, it should just be a simple text file with each row being a chief complaint. A sample input file `test_input.txt` is provided.
 
 To run predict.py, use the following template:
 
@@ -34,7 +42,20 @@ python predict.py \
     --label_map=$MODEL_PATH/label_map.json \
     --config_name=$MODEL_PATH/config.json \
     --tokenizer_name=$MODEL_PATH/vocab.txt \
+    --k=5 \
     --do_lower_case
 ```
+
+The following files will be saved to the output directory:
+
+`cached_data`: a cache of processed input data for convenience.
+
+`prediction_labels.csv`: a csv file of top k predicted labels for each chief complaint (same order as input file).
+
+`prediction_probs.csv`: a csv file of corresponding probability scores for the labels.
+
+`output.txt`: a text file with user friendly printouts of the results.
+
+
 
 a text file containing printouts of the chief complaints and their top predictions with their scores, two csv files containing the predicted labels and their probabilities, and a text file containing user-friendly printouts of the chief complaints and their top predictions along their scores,
