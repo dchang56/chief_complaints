@@ -3,4 +3,7 @@ pandas
 torch
 tqdm
 transformers
+scipy
+sklearn
+matplotlib
 
