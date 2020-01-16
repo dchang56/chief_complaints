@@ -1,5 +1,8 @@
 # Classifying free-text chief complaints in the Emergency Department using BERT
 
+## description of project
+1.8 million visits in yale hospital system
+
 
 Download pretrained models and accompanying files from: https://drive.google.com/drive/folders/13GpWRlJCt8Sv_8fpR1nLkIGiIn4aFuAO?usp=sharing
 
@@ -12,6 +15,8 @@ There are 4 options for pretrained models based on the different versions of tra
 `training_args.bin`: a dictionary of training args used for the model.
 
 `vocab.txt`: vocab used by tokenizer.
+
+
 
 To run predict.py, use the following template:
 
