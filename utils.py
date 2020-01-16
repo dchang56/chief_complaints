@@ -17,7 +17,6 @@ from scipy.stats import pearsonr, spearmanr
 from sklearn.metrics import matthews_corrcoef, f1_score, precision_recall_fscore_support, confusion_matrix
 
 import matplotlib.pyplot as plt
-import seaborn as sn
 
 def setup_parser():
     parser = argparse.ArgumentParser()

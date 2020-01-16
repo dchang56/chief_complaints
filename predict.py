@@ -144,7 +144,7 @@ def predict(args, model, tokenizer):
             preds = torch.cat((preds, F.softmax(logits.detach().cpu(), dim=1)), axis=0)
             examples_ids = np.append(example_ids, batch[4].detach().cpu().numpy(), axis=0)
         
-    k = 5
+    k = args.k
     #now we just want to print the top 3 predictions per sample
     preds_prob, preds_topk = torch.topk(preds, k, dim=1, largest=True, sorted=True)
     #now you have a matrix with 5 columns and n rows
@@ -186,6 +186,7 @@ def main():
                         help='uncased model')
     parser.add_argument('--batch_size', default=1000, type=int,
                         help='batch size for processing chief complaint file')
+    parser.add_argument('--k', default=5, type=int, help='top k predictions')
     
     args = parser.parse_args()
     
