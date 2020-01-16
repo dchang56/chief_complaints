@@ -14,6 +14,10 @@ train.py in training folder. If you have any questions, email me
 
 Download pretrained models and accompanying files from: https://drive.google.com/drive/folders/13GpWRlJCt8Sv_8fpR1nLkIGiIn4aFuAO?usp=sharing
 
+Use the following command to extract:
+
+`tar -xzvf [archivename]`
+
 There are 4 options for pretrained models based on the different versions of training data (subsets with 29, 117, 260, and 434 possible labels). Each folder contains 4 files:
 
 `label_map.json`: a dictionary mapping labels to integers.
@@ -62,6 +66,3 @@ The following files will be saved to the output directory:
 
 `output.txt`: a text file with user friendly printouts of the results.
 
-
-
-a text file containing printouts of the chief complaints and their top predictions with their scores, two csv files containing the predicted labels and their probabilities, and a text file containing user-friendly printouts of the chief complaints and their top predictions along their scores,
