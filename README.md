@@ -36,3 +36,5 @@ python predict.py \
     --tokenizer_name=$MODEL_PATH/vocab.txt \
     --do_lower_case
 ```
+
+a text file containing printouts of the chief complaints and their top predictions with their scores, two csv files containing the predicted labels and their probabilities, and a text file containing user-friendly printouts of the chief complaints and their top predictions along their scores,
