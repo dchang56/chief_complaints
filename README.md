@@ -24,7 +24,13 @@ There are 4 options for pretrained models based on the different versions of tra
 
 `vocab.txt`: vocab used by tokenizer.
 
+`config.json`: configuration file for the model.
+
 ## Generate predictions for your own chief complaint data
+
+clone repo
+pip install -r requirements.txt
+download pretrained model
 
 To run the model on your own set of chief complaints, it should just be a simple text file with each row being a chief complaint. A sample input file `test_input.txt` is provided.
 
