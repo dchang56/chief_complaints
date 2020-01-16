@@ -16,7 +16,9 @@ There are 4 options for pretrained models based on the different versions of tra
 
 `vocab.txt`: vocab used by tokenizer.
 
+## Usage
 
+If you want to run the model on your own set of chief complaint texts, it should just be a simple text file with each row being a chief complaint text. A sample input file is provided `test_input.txt`
 
 To run predict.py, use the following template:
 
