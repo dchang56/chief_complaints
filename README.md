@@ -1,24 +1,20 @@
 # Classifying free-text chief complaints in the Emergency Department using BERT
 
-## what are chief complaints and why are they important
+Repository for the paper Generating Contextual Embeddings for Emergency Department Chief Complaints using BERT (submitted to JAMIA)
 
-## what did we do
+A clinical BERT model was trained on 1.8 million emergency department chief complaints to classify free-text chief complaints to provider-assigned labels (also known as presenting problems). 
 
-We trained a clinical BERT model 1.8 million visits from 2013-2018 in the Yale hospital system to map free-text chief complaints to structured categories of presenting problems.
-
-## How? brief summary of training
-
-train.py in training folder. If you have any questions, email me
+This repository contains the code used for the project. Most notably, we provide a script `predict.py` and instructions for generating predictions for custom chief complaint datasets using our pretrained models.
 
 ## Pretrained models
 
-Download pretrained models and accompanying files from: https://drive.google.com/drive/folders/13GpWRlJCt8Sv_8fpR1nLkIGiIn4aFuAO?usp=sharing
+Download the pretrained models and accompanying files from: https://drive.google.com/drive/folders/13GpWRlJCt8Sv_8fpR1nLkIGiIn4aFuAO?usp=sharing
 
-Use the following command to extract:
+Use the following command to extract the archive:
 
 `tar -xzvf [archivename]`
 
-There are 4 options for pretrained models based on the different versions of training data (subsets with 29, 117, 260, and 434 possible labels). Each folder contains 4 files:
+There are 4 versions for pretrained models based on the different subsets of training data used (subsets with 29, 117, 260, and 434 most frequently occuring labels). Each folder contains 4 files:
 
 `label_map.json`: a dictionary mapping labels to integers.
 
@@ -30,15 +26,21 @@ There are 4 options for pretrained models based on the different versions of tra
 
 `config.json`: configuration file for the model.
 
+Which version to use depends on the user's preference for specificity of the labels. Check label_map.json to see if the label space is sufficiently comprehensive for your purpose. 
+
 ## Generate predictions for your own chief complaint data
 
-clone repo
-pip install -r requirements.txt
-download pretrained model
+Follow these steps:
 
-To run the model on your own set of chief complaints, it should just be a simple text file with each row being a chief complaint. A sample input file `test_input.txt` is provided.
+1. `git clone https://github.com/dchang56/chief_complaints` && `cd chief_complaints`
 
-To run predict.py, use the following template:
+2. `pip install -r requirements.txt`
+
+3. Download and extract pretrained model archive from link above
+
+4. Prepare your input file as a simple text file with one chief complaint per line (`test_input.txt` is provided as an example)
+
+5. run `predict.py` using the following template with appropriate paths. The argument `k` allows you to get the top k predictions of the model for each chief complaint.
 
 ```bash
 export INPUT_FILE=/path/to/input_file
@@ -66,3 +68,7 @@ The following files will be saved to the output directory:
 
 `output.txt`: a text file with user friendly printouts of the results.
 
+
+## Contact
+
+Please post an issue or email david.chang@yale.edu if you have any questions.
