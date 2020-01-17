@@ -40,7 +40,7 @@ Follow these steps:
 
 4. Prepare your input file as a simple text file with one chief complaint per line (`test_input.txt` is provided as an example)
 
-5. run `predict.py` using the following template with appropriate paths. The argument `k` allows you to get the top k predictions of the model for each chief complaint.
+5. run `predict.py` using the following template with appropriate paths. The argument `k` allows you to get the top k predictions of the model for each chief complaint. If you don't have your own dataset or just want to see how it works, use `test_input.txt` as your input file.
 
 ```bash
 export INPUT_FILE=/path/to/input_file
