@@ -14,7 +14,7 @@ Use the following command to extract the archive:
 
 `tar -xzvf [archivename]`
 
-There are 4 versions for pretrained models based on the different subsets of training data used (subsets with 29, 117, 260, and 434 most frequently occuring labels). Each folder contains 4 files:
+There are 4 versions for pretrained models based on the different subsets of training data used (subsets with 29, 117, 260, and 434 most frequently occuring labels). Each folder contains 5 files:
 
 `label_map.json`: a dictionary mapping labels to integers.
 
