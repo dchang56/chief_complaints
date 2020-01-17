@@ -32,11 +32,11 @@ Which version to use depends on the user's preference for specificity of the lab
 
 Follow these steps:
 
-1. `git clone https://github.com/dchang56/chief_complaints` && `cd chief_complaints`
+1. `git clone https://github.com/dchang56/chief_complaints && cd chief_complaints`
 
 2. `pip install -r requirements.txt`
 
-3. Download and extract pretrained model archive from link above
+3. Download and extract pretrained model archive from the link above
 
 4. Prepare your input file as a simple text file with one chief complaint per line (`test_input.txt` is provided as an example)
 
